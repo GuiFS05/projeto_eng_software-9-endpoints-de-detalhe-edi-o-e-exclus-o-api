@@ -13,7 +13,9 @@ from .views import ClienteViewSet
 #   DELETE /clientes/{id}/     -> destroy
 router = DefaultRouter()
 router.register(r'clientes', ClienteViewSet, basename='cliente')
+urlpatterns = router.urls
+
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
 ]
