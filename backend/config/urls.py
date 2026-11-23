@@ -31,4 +31,8 @@ urlpatterns = [
 
     # (Opcional) Login/logout da API navegável do DRF
     path('api-auth/', include('rest_framework.urls')),
+
+    #swager
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui")
 ]
