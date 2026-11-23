@@ -1,7 +1,6 @@
 # clientes/urls.py
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-
 from .views import ClienteViewSet
 
 # O router cria automaticamente as rotas:
@@ -15,7 +14,3 @@ router = DefaultRouter()
 router.register(r'clientes', ClienteViewSet, basename='cliente')
 urlpatterns = router.urls
 
-
-urlpatterns = [
-    path('api/', include(router.urls)),
-]
